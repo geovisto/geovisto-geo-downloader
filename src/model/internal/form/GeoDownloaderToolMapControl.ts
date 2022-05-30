@@ -64,8 +64,8 @@ class GeoDownloaderToolMapControl {
             this.leafletMap = map;
         }
         // Load countries from file
-        this.countriesList = require("../../../static/iso3166_countries.json");
-        this.tableOfLevels = require("../../../static/admin_levels.json");
+        this.countriesList = require("./static_downloader/iso3166_countries.json");
+        this.tableOfLevels = require("./static_downloader/admin_levels.json");
         this.tableOfLevels.forEach((val) => {
             this.levelMap.set(val["Country"], val);
         });

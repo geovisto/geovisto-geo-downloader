@@ -7,6 +7,8 @@ import babel from '@rollup/plugin-babel';
 import autoprefixer from 'autoprefixer';
 import postcssCopy from 'postcss-copy';
 import json from '@rollup/plugin-json';
+import copy from 'rollup-plugin-copy'
+
 
 const packageJson = require('./package.json');
 
@@ -45,6 +47,10 @@ export default {
             extensions: ['.sass', '.css', '.scss']
         }),
         json({ compact: true }),
+        copy({
+            targets: [
+              { src: ['src/static_downloader/admin_levels.json', 'src/static_downloader/iso3166_countries.json'], dest: 'dist/static_downloader' }]
+        })
     ],
     external: id => id.includes('@babel/runtime'),
     onwarn: function (warning, warn) {
