@@ -11,7 +11,7 @@ This repository is a snapshot of Geoviosto ``tools/downloader`` derived from the
 ```js
 import {
     GeovistoGeoDownloaderTool
-} from 'geovisto-tool-geo-downloader';
+} from 'geovisto-geo-downloader';
 
 // create instance of map with given props
 const map = Geovisto.createMap({
@@ -20,7 +20,7 @@ const map = Geovisto.createMap({
     // instances of Geovisto tools (extensions) which will be directly used in the map
     // Instance of downloader tool
     GeovistoGeoDownloaderTool.createTool({
-        id: "geovisto-tool-geo-downloader"
+        id: "geovisto-geo-downloader"
     }),
   ])
 });
@@ -32,8 +32,8 @@ map.draw(Geovisto.getMapConfigManagerFactory().default({
   tools?: [
     // config of Geovisto tools (extensions) used in the map
     {
-        "type": "geovisto-tool-geo-downloader",
-        "id": "geovisto-tool-geo-downloader",
+        "type": "geovisto-geo-downloader",
+        "id": "geovisto-geo-downloader",
         "enabled": true
     }
 ));
@@ -44,7 +44,7 @@ map.draw(Geovisto.getMapConfigManagerFactory().default({
 ## Installation
 
 ```
-npm install --save geovisto-tool-geo-downloader
+npm install --save geovisto-geo-downloader
 ```
 
 This package serves as an extension of Geovisto core using the API for Geovisto tools (extensions). Follow Geovisto core on [Github](https://github.com/geovisto/geovisto).
